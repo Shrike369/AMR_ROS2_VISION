@@ -1,0 +1,36 @@
+//gazebo sim cmd:
+
+gz sim /home/shree/map_gazebo/a_whole_new_world.sdf
+
+//launch_file cmd:
+
+ros2 launch my_py_amr camera_bridge_launch.py
+
+// planner_server cmd: 
+
+ros2 lifecycle set /map_server configure
+ros2 lifecycle set /map_server activate
+
+ros2 lifecycle set /planner_server configure
+ros2 lifecycle set /planner_server activate
+
+ros2 lifecycle set /controller_server configure
+ros2 lifecycle set /controller_server activate
+
+ros2 lifecycle set /collision_monitor configure
+ros2 lifecycle set /collision_monitor activate
+
+ros2 lifecycle set /bt_navigator configure
+ros2 lifecycle set /bt_navigator activate
+
+
+ros2 lifecycle get /planner_server
+
+
+gz cmd_vel bridge command:
+
+ros2 run ros_gz_bridge parameter_bridge /cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist
+
+check it:
+
+gz topic -e --topic /cmd_vel

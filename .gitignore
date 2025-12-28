@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# colcon / build
+build_*/
+install/
+log/
+
+# ROS
+.rosinstall
+*.bag
+*.db3
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Misc
+*.egg-info/
+.eggs/

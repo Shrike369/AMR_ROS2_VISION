@@ -1,0 +1,100 @@
+# Minimal working Nav2 params — customize later for tuning
+
+map_server:
+  ros__parameters:
+    topic: /map
+    yaml_filename: ''
+    use_sim_time: true
+
+planner_server:
+  ros__parameters:
+    planner_plugins: ['GridBased']
+    GridBased:
+      # Use the fully-qualified class name expected by plugin loader
+      plugin: 'nav2_navfn_planner::NavfnPlanner'
+
+controller_server:
+  ros__parameters:
+    controller_plugins: ['FollowPath']
+    FollowPath:
+      # Use a simpler controller that doesn't require DWB critics by default
+      plugin: 'nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController'
+      # Minimal tuning (tweak for your robot)
+      lookahead_distance: 0.6
+      use_regulated_pure_pursuit: true
+
+bt_navigator:
+  ros__parameters:
+    use_sim_time: true
+
+global_costmap:
+  ros__parameters:
+    global_frame: map
+    robot_base_frame: base_link
+    use_sim_time: true
+
+local_costmap:
+  ros__parameters:
+    global_frame: odom
+    robot_base_frame: base_link
+    use_sim_time: true
+
+lifecycle_manager:
+  ros__parameters:
+    autostart: true
+    node_names:
+      - map_server
+      - planner_server
+      - controller_server
+      - bt_navigator
+
+# Explicit lifecycle manager settings for navigation and localization
+# Limit node_names so docking_server is not part of the auto-start group
+lifecycle_manager_navigation:
+  ros__parameters:
+    autostart: true
+    node_names:
+      - map_server
+      - planner_server
+      - controller_server
+      - bt_navigator
+      - collision_monitor
+
+lifecycle_manager_localization:
+  ros__parameters:
+    autostart: true
+    node_names:
+      - map_server
+      - amcl
+
+collision_monitor:
+  ros__parameters:
+    base_frame_id: base_link
+    odom_frame_id: odom
+    cmd_vel_in_topic: cmd_vel_smoothed
+    cmd_vel_out_topic: cmd_vel
+    state_topic: collision_monitor_state
+    transform_tolerance: 0.2
+    source_timeout: 1.0
+    base_shift_correction: True
+    stop_pub_timeout: 2.0
+    polygons: ["FootprintApproach"]
+    FootprintApproach:
+      type: "polygon"
+      action_type: "approach"
+      footprint_topic: "/local_costmap/published_footprint"
+      time_before_collision: 1.2
+      simulation_time_step: 0.1
+      min_points: 6
+      visualize: False
+      enabled: True
+    observation_sources: ["scan"]
+    scan:
+      type: "scan"
+      topic: "scan"
+      min_height: 0.0
+  docking_server:
+    ros__parameters:
+      # Disable docking server by default to avoid plugin configuration errors
+      enabled: false
+      dock_plugins: []
