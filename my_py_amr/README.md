@@ -112,10 +112,6 @@ This package does not include unit tests in this repository. If you need tests, 
 
 ## Troubleshooting & tips ⚠️
 
-- If markers are not being detected:
-	- Enable `debug` to get annotated images on `/top_down/debug_image` and inspect the masks saved to `/tmp/top_down_mask_*`.
-	- Tune the HSV ranges (especially when lighting changes) and ensure `camera_height` and intrinsics (`CameraInfo`) are correct.
-
 - If Nav2 cannot find the map, ensure `image_to_occupancy` publishes `/map` with TRANSIENT_LOCAL durability (the node does this by default).
 
 - If images aren't appearing, verify `ros_gz_bridge` is running and that the bridge topics listed in the launch file match the Gazebo model names in your world.
