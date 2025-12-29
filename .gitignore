@@ -1,7 +1,6 @@
 # Byte-compiled / cache
 __pycache__/
 *.py[cod]
-.pytest_cache/
 
 # Build / install
 build/

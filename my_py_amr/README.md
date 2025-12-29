@@ -104,17 +104,9 @@ You can override parameters at runtime with `--ros-args -p <name>:=<value>` or v
 
 ---
 
-## Testing ✅
+## Testing ⚠️
 
-This package includes unit tests for the marker detection logic. To run tests:
-
-```bash
-python3 -m pytest -q
-# or use colcon test to run tests within an ament context
-colcon test --packages-select my_py_amr
-```
-
-The detection function (`detect_markers`) is written to be testable without ROS so tests can run quickly in CI.
+This package does not include unit tests in this repository. If you need tests, please add them back into a `test/` directory and include any required test dependencies in `setup.py`.
 
 ---
 

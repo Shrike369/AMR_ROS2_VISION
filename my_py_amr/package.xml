@@ -15,10 +15,7 @@
   <exec_depend>tf2_ros</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
 
-  <test_depend>ament_copyright</test_depend>
-  <test_depend>ament_flake8</test_depend>
-  <test_depend>ament_pep257</test_depend>
-  <test_depend>python3-pytest</test_depend>
+  <!-- Tests removed from repository; remove test dependencies if re-adding tests add them back here -->
 
   <export>
     <build_type>ament_python</build_type>

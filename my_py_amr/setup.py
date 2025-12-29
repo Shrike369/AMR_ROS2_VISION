@@ -19,11 +19,7 @@ setup(
     maintainer_email='shree@todo.todo',
     description='TODO: Package description',
     license='TODO: License declaration',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    # No test extras; tests removed from repository
     entry_points={
         'console_scripts': [
             'camera_bridge = my_py_amr.camera_bridge_node:main',
