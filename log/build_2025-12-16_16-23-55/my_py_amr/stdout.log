@@ -1,0 +1,43 @@
+running egg_info
+creating ../build/my_py_amr/my_py_amr.egg-info
+writing ../build/my_py_amr/my_py_amr.egg-info/PKG-INFO
+writing dependency_links to ../build/my_py_amr/my_py_amr.egg-info/dependency_links.txt
+writing entry points to ../build/my_py_amr/my_py_amr.egg-info/entry_points.txt
+writing requirements to ../build/my_py_amr/my_py_amr.egg-info/requires.txt
+writing top-level names to ../build/my_py_amr/my_py_amr.egg-info/top_level.txt
+writing manifest file '../build/my_py_amr/my_py_amr.egg-info/SOURCES.txt'
+reading manifest file '../build/my_py_amr/my_py_amr.egg-info/SOURCES.txt'
+writing manifest file '../build/my_py_amr/my_py_amr.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/shree/ros2_ws/src1/build/my_py_amr/build
+creating /home/shree/ros2_ws/src1/build/my_py_amr/build/lib
+creating /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr
+copying my_py_amr/camera_bridge_node.py -> /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr
+copying my_py_amr/image_to_occupancy.py -> /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr
+copying my_py_amr/__init__.py -> /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr
+running install
+running install_lib
+creating /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr
+copying /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr/camera_bridge_node.py -> /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr
+copying /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr/image_to_occupancy.py -> /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr
+copying /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr/__init__.py -> /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr
+byte-compiling /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr/camera_bridge_node.py to camera_bridge_node.cpython-312.pyc
+byte-compiling /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr/image_to_occupancy.py to image_to_occupancy.cpython-312.pyc
+byte-compiling /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/shree/ros2_ws/src1/install/my_py_amr/share/ament_index
+creating /home/shree/ros2_ws/src1/install/my_py_amr/share/ament_index/resource_index
+creating /home/shree/ros2_ws/src1/install/my_py_amr/share/ament_index/resource_index/packages
+copying resource/my_py_amr -> /home/shree/ros2_ws/src1/install/my_py_amr/share/ament_index/resource_index/packages
+copying package.xml -> /home/shree/ros2_ws/src1/install/my_py_amr/share/my_py_amr
+creating /home/shree/ros2_ws/src1/install/my_py_amr/share/my_py_amr/launch
+copying launch/camera_bridge_launch.py -> /home/shree/ros2_ws/src1/install/my_py_amr/share/my_py_amr/launch
+creating /home/shree/ros2_ws/src1/install/my_py_amr/share/my_py_amr/params
+copying params/nav2_params.yaml -> /home/shree/ros2_ws/src1/install/my_py_amr/share/my_py_amr/params
+running install_egg_info
+Copying ../build/my_py_amr/my_py_amr.egg-info to /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr-0.0.0-py3.12.egg-info
+running install_scripts
+Installing camera_bridge script to /home/shree/ros2_ws/src1/install/my_py_amr/lib/my_py_amr
+Installing image_to_occupancy script to /home/shree/ros2_ws/src1/install/my_py_amr/lib/my_py_amr
+writing list of installed files to '/home/shree/ros2_ws/src1/build/my_py_amr/install.log'

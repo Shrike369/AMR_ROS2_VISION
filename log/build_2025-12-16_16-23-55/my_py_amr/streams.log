@@ -1,0 +1,45 @@
+[2.530s] Invoking command in '/home/shree/ros2_ws/src1/my_py_amr': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/shree/ros2_ws/src1/build/my_py_amr/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_py_amr build --build-base /home/shree/ros2_ws/src1/build/my_py_amr/build install --record /home/shree/ros2_ws/src1/build/my_py_amr/install.log --single-version-externally-managed install_data
+[3.359s] running egg_info
+[3.361s] creating ../build/my_py_amr/my_py_amr.egg-info
+[3.416s] writing ../build/my_py_amr/my_py_amr.egg-info/PKG-INFO
+[3.416s] writing dependency_links to ../build/my_py_amr/my_py_amr.egg-info/dependency_links.txt
+[3.417s] writing entry points to ../build/my_py_amr/my_py_amr.egg-info/entry_points.txt
+[3.417s] writing requirements to ../build/my_py_amr/my_py_amr.egg-info/requires.txt
+[3.417s] writing top-level names to ../build/my_py_amr/my_py_amr.egg-info/top_level.txt
+[3.418s] writing manifest file '../build/my_py_amr/my_py_amr.egg-info/SOURCES.txt'
+[3.547s] reading manifest file '../build/my_py_amr/my_py_amr.egg-info/SOURCES.txt'
+[3.548s] writing manifest file '../build/my_py_amr/my_py_amr.egg-info/SOURCES.txt'
+[3.549s] running build
+[3.549s] running build_py
+[3.549s] creating /home/shree/ros2_ws/src1/build/my_py_amr/build
+[3.550s] creating /home/shree/ros2_ws/src1/build/my_py_amr/build/lib
+[3.550s] creating /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr
+[3.551s] copying my_py_amr/camera_bridge_node.py -> /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr
+[3.551s] copying my_py_amr/image_to_occupancy.py -> /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr
+[3.552s] copying my_py_amr/__init__.py -> /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr
+[3.552s] running install
+[3.565s] running install_lib
+[3.625s] creating /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr
+[3.627s] copying /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr/camera_bridge_node.py -> /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr
+[3.627s] copying /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr/image_to_occupancy.py -> /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr
+[3.627s] copying /home/shree/ros2_ws/src1/build/my_py_amr/build/lib/my_py_amr/__init__.py -> /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr
+[3.628s] byte-compiling /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr/camera_bridge_node.py to camera_bridge_node.cpython-312.pyc
+[3.630s] byte-compiling /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr/image_to_occupancy.py to image_to_occupancy.cpython-312.pyc
+[3.633s] byte-compiling /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr/__init__.py to __init__.cpython-312.pyc
+[3.633s] running install_data
+[3.634s] creating /home/shree/ros2_ws/src1/install/my_py_amr/share/ament_index
+[3.634s] creating /home/shree/ros2_ws/src1/install/my_py_amr/share/ament_index/resource_index
+[3.634s] creating /home/shree/ros2_ws/src1/install/my_py_amr/share/ament_index/resource_index/packages
+[3.635s] copying resource/my_py_amr -> /home/shree/ros2_ws/src1/install/my_py_amr/share/ament_index/resource_index/packages
+[3.636s] copying package.xml -> /home/shree/ros2_ws/src1/install/my_py_amr/share/my_py_amr
+[3.636s] creating /home/shree/ros2_ws/src1/install/my_py_amr/share/my_py_amr/launch
+[3.637s] copying launch/camera_bridge_launch.py -> /home/shree/ros2_ws/src1/install/my_py_amr/share/my_py_amr/launch
+[3.637s] creating /home/shree/ros2_ws/src1/install/my_py_amr/share/my_py_amr/params
+[3.638s] copying params/nav2_params.yaml -> /home/shree/ros2_ws/src1/install/my_py_amr/share/my_py_amr/params
+[3.638s] running install_egg_info
+[3.697s] Copying ../build/my_py_amr/my_py_amr.egg-info to /home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages/my_py_amr-0.0.0-py3.12.egg-info
+[3.698s] running install_scripts
+[4.068s] Installing camera_bridge script to /home/shree/ros2_ws/src1/install/my_py_amr/lib/my_py_amr
+[4.068s] Installing image_to_occupancy script to /home/shree/ros2_ws/src1/install/my_py_amr/lib/my_py_amr
+[4.069s] writing list of installed files to '/home/shree/ros2_ws/src1/build/my_py_amr/install.log'
+[4.217s] Invoked command in '/home/shree/ros2_ws/src1/my_py_amr' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/shree/ros2_ws/src1/build/my_py_amr/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/shree/ros2_ws/src1/install/my_py_amr/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_py_amr build --build-base /home/shree/ros2_ws/src1/build/my_py_amr/build install --record /home/shree/ros2_ws/src1/build/my_py_amr/install.log --single-version-externally-managed install_data
