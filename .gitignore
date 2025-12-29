@@ -1,25 +1,31 @@
-# Python
+# Byte-compiled / cache
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
+.pytest_cache/
 
-# colcon / build
+# Build / install
+build/
+install/
+.eggs/
+*.egg-info/
+
+# ROS / colcon
+log/
 build_*/
 install/
-log/
+COLCON_IGNORE
 
-# ROS
-.rosinstall
-*.bag
-*.db3
+# Python virtual environments
+venv/
+env/
 
-# VSCode
+# IDE / editor
 .vscode/
+.idea/
 
-# macOS
+# OS
 .DS_Store
+Thumbs.db
 
-# Misc
-*.egg-info/
-.eggs/
+# Cache
+*.log

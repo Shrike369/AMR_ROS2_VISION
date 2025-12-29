@@ -141,13 +141,7 @@ The detection function (`detect_markers`) is written to be testable without ROS 
 
 Maintainer: **shree**
 
-This repository is distributed under the MIT License (see top-level `LICENSE`). Please also update `package.xml` if you change licensing.
-
-## CI & contribution
-
-- GitHub Actions are included in the upstream repository to run `flake8` and `pytest` on PRs.
-- Please run linters and tests locally before opening a PR: `flake8` and `pytest -q`.
-- Contribution guidelines are in `CONTRIBUTING.md` — small, focused PRs with clear descriptions are appreciated.
+This repository currently does not declare a specific open-source license in `package.xml` or `setup.py`. Add a license file (e.g., `LICENSE`) and update `package.xml` when you decide which license to apply.
 
 Questions or improvements? Open an issue or send a patch — small, readable contributions are welcome.
 
