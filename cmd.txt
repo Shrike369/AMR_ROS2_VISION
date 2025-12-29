@@ -27,10 +27,53 @@ ros2 lifecycle set /bt_navigator activate
 ros2 lifecycle get /planner_server
 
 
-gz cmd_vel bridge command:
+//gz cmd_vel bridge command:
 
 ros2 run ros_gz_bridge parameter_bridge /cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist
 
 check it:
 
 gz topic -e --topic /cmd_vel
+
+// --- Other useful commands (workspace, ROS 2, Gazebo, Nav2) ---
+// Build & source the workspace (after changes):
+colcon build --packages-select my_py_amr
+source install/setup.bash
+
+// Quick rebuild (useful during development):
+colcon build --packages-select my_py_amr --symlink-install && source install/setup.bash
+
+// Inspect ROS topics, nodes, services and params:
+ros2 topic list                     // list active topics
+ros2 topic echo /cmd_vel            // print messages published on /cmd_vel
+ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.2, y: 0.0, z: 0.0}, angular: {z: 0.0}}" -r 10
+ros2 node list                      // list running ROS nodes
+ros2 service list                   // list available services
+ros2 param list /planner_server     // list parameters for planner_server
+ros2 param get /planner_server use_sim_time  // inspect specific parameter
+
+// Record and play back topics (capture data for debugging):
+ros2 bag record -a -o mybag         // record all topics to 'mybag'
+ros2 bag play mybag                 // play back a recorded bag
+
+// RViz and graph tools:
+rviz2                              // start RViz (use -d <config> to load a config)
+rqt_graph                          // visualize node/topic graph
+
+// Gazebo / gz helper commands:
+gz topic -l                         // list Gazebo topics
+gz topic -e --topic /camera/image_raw  // echo a Gazebo topic (inspect messages)
+gz sim /home/shree/map_gazebo/a_whole_new_world.sdf  // start simulator with specified world
+
+// Navigation (Nav2) lifecycle & quick checks:
+ros2 lifecycle set /planner_server configure
+ros2 lifecycle set /planner_server activate
+ros2 lifecycle get /planner_server   // query lifecycle state
+ros2 param dump /planner_server     // dump parameters for debugging
+
+// Helpful debugging and info commands:
+ros2 topic info /cmd_vel            // show publisher/subscriber info for a topic
+ros2 service call /compute_path_to_pose nav2_msgs/srv/ComputePathToPose "{goal: {pose: {position: {x: 1.0, y: 0.0, z: 0.0}, orientation: {w: 1.0}}}}"
+
+// Note: Some commands (e.g., services) require the corresponding node to be active and
+// the message/service types to be available in your environment.
